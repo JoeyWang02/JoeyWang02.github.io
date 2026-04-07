@@ -41,5 +41,5 @@ The second plot is an interactive geographic scatter plot showing the specific c
 </div>
 
 <div class="right">
-{% include elements/button.html link="github link" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/JoeyWang02/JoeyWang02.github.io/blob/main/python_notebooks/bigfoot_analysis.ipynb" text="The Analysis" %}
 </div>
