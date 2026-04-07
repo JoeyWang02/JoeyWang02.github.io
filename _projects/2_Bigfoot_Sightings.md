@@ -1,7 +1,7 @@
 ---
 name: Bigfoot Sightings Analysis
 tools: [Python, HTML, vega-lite, Altair]
-image: ""
+image: assets/pngs/bigfoot_map.png
 description: Interactive visualizations exploring Bigfoot sightings across the US by season.
 custom_js:
   - vega.min
