@@ -1,27 +1,15 @@
-- title: AMAZING STUFF
-  from: 2019
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: M.S. in Information Management, UIUC
+  from: 2025
+  to: 2027
+  description: >-
+    Focusing on Software Engineering, Database Systems, and Data Visualization. 
+    Actively developing full-stack projects, including an AI-powered student schedule 
+    planner using Java and Spring Boot, and a car crash risk analysis web application.
 
-- title: Student, Harvard CS
-  from: 2013
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+- title: B.S. in Civil, Hydraulic, and Transportation Engineering, Zhejiang University
+  from: 2020
+  to: 2024
+  description: >-
+    Completed rigorous engineering coursework with a strong emphasis on analytical 
+    problem-solving and mathematics. This foundational experience cultivated my logical 
+    thinking and paved the way for my transition into software development and data science.
