@@ -1,8 +1,8 @@
 ---
-name: Chicago Crime & Socioeconomic Analysis
-tools: [Python, HTML, vega-lite, Altair, Pandas]
-image: <vegachart schema-url="{{ site.baseurl }}/IS445_Final/final_visualization.png" style="width: 100%"></vegachart>
-description: An interactive data journalism piece exploring Chicago crime patterns through temporal rhythms, transit hubs, and socioeconomic contexts.
+name: Chicago Crime Analysis 2026
+tools: [Python, Altair, Vega-Lite]
+image: https://raw.githubusercontent.com/xinyic11/IS445_Final/main/final_visualization.png
+description: An interactive data journalism article exploring the spatial, temporal, and socioeconomic dimensions of crime in Chicago.
 custom_js:
   - vega.min
   - vega-lite.min
@@ -10,46 +10,57 @@ custom_js:
   - justcharts
 ---
 
-# Final Project: Deconstructing Chicago's Safety Landscape
+# Rhythms of the City: A 2026 Chicago Crime Perspective
+**Authors: Group 6 (Xinyi Chen, Zhongyin Wang)**
 
-This project analyzes reported crime incidents in Chicago from early 2026. Instead of simply mapping where crimes occur, this analysis delves deeper into the "when" and "why." By integrating contextual datasets such as socioeconomic hardship indexes, population demographics, and CTA transit station locations, this project aims to provide a more nuanced, normalized view of urban safety.
-
-## Visualization 1: The 24-Hour Pulse of the City (Interactive Dashboard)
-
-This interactive dashboard serves as the core exploratory tool, allowing users to investigate how different types of crimes ebb and flow throughout the week. 
-
-**Design Choices & Interactivity:** The dashboard utilizes linked views to connect spatial data (the map) with temporal trends (the line charts). I deliberately segmented the 24-hour day into four distinct, semantic periods: *Morning (6am-12pm)*, *Afternoon (12pm-6pm)*, *Evening (6pm-12am)*, and *Late Night (12am-6am)*. I applied a custom intuitive color palette (e.g., bright orange for afternoon, dark navy for late night) to make these periods instantly recognizable. 
-
-To provide an analytical baseline, I implemented a "Whole-to-Part" layering technique. A highly visible red/gray line represents the total daily incidents, while the segmented colored lines are overlaid on top. This allows readers to instantly identify which specific time period is driving a sudden spike in the city's overall crime rate. The dashboard supports cross-filtering: brushing over the map or selecting a specific crime type from the dropdown dynamically updates the temporal trend lines.
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/interactive_dashboard.json" style="width: 100%"></vegachart>
+Crime is rarely a random occurrence; it is a complex tapestry woven from geography, time, and social conditions. This report dives into tens of thousands of crime records from the 2026 Chicago dataset to uncover where, when, and why these incidents happen.
 
 ---
 
-## Visualization 2: Socioeconomic Context & Per Capita Analysis
+## 1. Central Exploration: The Crime Landscape (Interactive Dashboard)
 
-Raw crime counts can be misleading, as they often merely mirror a neighborhood's population density. To correct this, I incorporated a secondary dataset containing Chicago Census demographic and hardship data. 
+To understand Chicago's safety, one must look at the city as a whole while being able to zoom into its parts. Our primary dashboard provides this flexibility.
 
-**Transformations & Analytical Approach:** In this visualization, I performed data aggregation to calculate the **crime rate per 1,000 residents** for each Community Area. By plotting population size against total crime incidents and adding a regression trend line, the scatter plot clearly highlights the outliers—neighborhoods that suffer from disproportionately high crime rates relative to their population size. 
+<vegachart schema-url="https://raw.githubusercontent.com/xinyic11/IS445_Final/main/json/interactive_dashboard.json" style="width: 100%"></vegachart>
 
-The color encoding (`scale=alt.Scale(scheme='purples')`) maps to this newly calculated per-capita rate. This shift from absolute numbers to normalized rates provides a critical sociological lens, revealing how systemic socioeconomic factors, rather than just population density, correlate with neighborhood safety.
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/poverty_scatter_regression.json" style="width: 100%"></vegachart>
-
----
-
-*(Optional: To explore the exact spatial correlation between poverty density and crime incidents, use the overlay map below.)*
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/poverty_crime_overlay.json" style="width: 100%"></vegachart>
+**How to Interact:**
+You can directly click on any **Police District** on the map to filter the entire view. Once a district is selected, the bar chart on the right automatically updates to show the specific "Primary Types" of crime in that area, and the timeline below reflects the incident fluctuations for that specific region over the first half of 2026. This linked interactivity allows you to compare the safety profiles of downtown business hubs versus residential neighborhoods.
 
 ---
 
-## The Data & The Analysis
+## 2. Temporal Patterns: The City's Heartbeat (Contextual Analysis)
+
+While the dashboard shows *where* crime happens, it is equally important to know *when* it peaks. We analyzed crime density across every hour of every day of the week.
+
+<vegachart schema-url="https://raw.githubusercontent.com/xinyic11/IS445_Final/main/json/crime_heatmap_interactive.json" style="width: 100%"></vegachart>
+
+**Data Insight:**
+This heatmap reveals a distinct "temporal pulse." Regardless of the district, there is a significant surge in reported incidents during late Friday and Saturday nights (10 PM – 2 AM), likely correlated with nighttime social activities. Conversely, weekday mornings show the lowest activity. By understanding these "risk windows," city resources can be deployed more effectively when they are needed most.
+
+---
+
+## 3. Socioeconomic Roots: Poverty and Safety (Contextual Analysis)
+
+To look beyond the surface, we must ask: What drives these geographical differences? We correlated the total crime count of each community with its poverty rate.
+
+<vegachart schema-url="https://raw.githubusercontent.com/xinyic11/IS445_Final/main/json/poverty_scatter_regression.json" style="width: 100%"></vegachart>
+
+**Deep Dive:**
+The scatter plot above reveals a sobering reality: a strong positive correlation exists between economic hardship and crime volume. Communities like **Austin** and **South Shore**, which face higher poverty rates, also show the highest incident counts. However, "The Loop" remains an outlier—showing high crime despite low poverty—due to its massive influx of commuters and tourists. This suggests that while poverty is a structural driver of crime, high-density commercial areas create different "targets of opportunity."
+
+---
+
+## Data & Methods
+
+This analysis was conducted using Python and the Altair visualization library. All data is sourced from the City of Chicago Open Data Portal.
+
+* **Crime Dataset**: [Crimes - 2026 (Preliminary)](https://data.cityofchicago.org/)
+* **Social Indicators**: [Census Data - Socioeconomic Indicators](https://data.cityofchicago.org/)
 
 <div class="left">
-{% include elements/button.html link="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2" text="The Raw Data" %}
+{% include elements/button.html link="https://data.cityofchicago.org/Public-Safety/Crimes-2026/f6bk-yv3r/about_data" text="View Raw Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/JoeyWang02/is445_final/blob/main/final2%263_Workbook.ipynb" text="The Analysis Notebook" %}
+{% include elements/button.html link="https://github.com/xinyic11/IS445_Final/blob/main/final2%263_Workbook.ipynb" text="Analysis Notebook" %}
 </div>
