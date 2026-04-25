@@ -1,7 +1,7 @@
 ---
 name: Chicago Crime & Socioeconomic Analysis
 tools: [Python, HTML, vega-lite, Altair, Pandas]
-image: assets/pngs/final_visualization.png
+image: <vegachart schema-url="{{ site.baseurl }}/IS445_Final/interactive_dashboard.json" style="width: 100%"></vegachart>
 description: An interactive data journalism piece exploring Chicago crime patterns through temporal rhythms, transit hubs, and socioeconomic contexts.
 custom_js:
   - vega.min
