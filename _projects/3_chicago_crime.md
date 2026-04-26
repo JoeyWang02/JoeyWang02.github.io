@@ -21,7 +21,7 @@ Crime is rarely a random occurrence; it is a complex tapestry woven from geograp
 
 To understand Chicago's safety, one must look at the city as a whole while being able to zoom into its parts. Our primary dashboard provides this flexibility.
 
-<vegachart schema-url="https://raw.github.com/joeywang02/IS445_Final/main/json/interactive_dashboard.json" style="width: 100%"></vegachart>
+<vegachart schema-url="https://github.com/joeywang02/IS445_Final/main/json/interactive_dashboard.json" style="width: 100%"></vegachart>
 
 **How to Interact:**
 You can directly click on any **Police District** on the map to filter the entire view. Once a district is selected, the bar chart on the right automatically updates to show the specific "Primary Types" of crime in that area, and the timeline below reflects the incident fluctuations for that specific region over the first half of 2026. This linked interactivity allows you to compare the safety profiles of downtown business hubs versus residential neighborhoods.
