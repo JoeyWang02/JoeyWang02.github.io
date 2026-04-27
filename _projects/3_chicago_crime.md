@@ -62,5 +62,5 @@ This analysis was conducted using Python and the Altair visualization library. A
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/xinyic11/IS445_Final/blob/main/final2%263_Workbook.ipynb" text="Analysis Notebook" %}
+{% include elements/button.html link="https://github.com/JoeyWang02/IS445_Final/blob/main/final2%263_Workbook.ipynb" text="Analysis Notebook" %}
 </div>
